@@ -1,0 +1,792 @@
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+*:before, *:after
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-weight: 400
+	overflow-x: hidden
+	margin: 0
+	// height: 500vh
+	font-family: 'Roboto', sans-serif
+	
+p
+	margin: 0
+
+a
+	text-decoration: none
+	outline: none
+	display: inline-block
+	color: #000
+
+img
+	max-width: 100%
+	height: auto
+	vertical-align: bottom
+
+ul li,
+ol li
+	list-style: none
+	display: block
+	margin: 0
+
+span
+	display: inline-block
+
+ul, ol
+	display: block
+	margin: 0
+	padding-left: 0
+
+button
+	outline: none
+	border: 0
+	padding: 0
+	cursor: pointer
+
+strong
+	display: inline-block
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	font-weight: normal
+
+.site-wrap
+	overflow: hidden
+.container
+	margin: 0 auto
+	position: relative
+	// padding: 0 15px
+	max-width: 1600px
+	width: 100%
+	overflow: hidden
+
+$colorWhite: #fff
+$colorBlack: #000
+
+
+
+.mySwiper1, .mySwiper2
+	// max-width: 1440px
+	margin: 0 100px
+	.swiper-slide 
+		text-align: center 
+		display: -webkit-box 
+		display: -ms-flexbox 
+		display: -webkit-flex 
+		display: flex 
+		-webkit-box-pack: center 
+		-ms-flex-pack: center 
+		-webkit-justify-content: center 
+		justify-content: center 
+		-webkit-box-align: center 
+		-ms-flex-align: center 
+		-webkit-align-items: center 
+		align-items: center 
+
+
+
+
+//start avatar-header
+
+.avatar
+	&-wrapper
+		overflow: hidden
+		&-top
+			position: relative
+			&__main
+			&__arrow
+				position: absolute
+				top: 25%
+				left: 50%
+				transform: translateX(-50%)
+				width: 70px
+				height: 70px
+				background-color: #fff
+				border-radius: 50%
+				cursor: pointer
+				span 
+					position: absolute
+					left: 50%
+					top: 50%
+					display: block
+					width: 20px 
+					height: 20px 
+					border-bottom: 3px solid 
+					border-right: 3px solid 
+					border-color: $colorBlack
+					transform: rotate(45deg) 
+					margin: -10px 
+					animation: arrow-down 1.7s infinite
+					&:nth-child(1) 
+						animation-delay: -0.2s 
+					&:nth-child(2) 
+						animation-delay: -0.4s
+			&__jellyfish_1
+				position: absolute
+				top: 2.7%
+				left: 2.9%
+				width: 15%
+			&__jellyfish_2
+				position: absolute
+				top: 21.9%
+				left: -1.6%
+				width: 15%
+			&__jellyfish_3
+				position: absolute
+				top: 46.8%
+				left: 26.3%
+				width: 15%
+			&__jellyfish_4
+				position: absolute
+				top: 10.1%
+				right: 10%
+				width: 11%
+			&__jellyfish_5
+				position: absolute
+				top: 46.2%
+				right: 2.6%
+				width: 15%
+			&__jellyfish_6
+				position: absolute
+				top: 60%
+				left: 0.7%
+				width: 14.6%
+			&__jellyfish_7
+				position: absolute
+				top: 68.7%
+				right: 10%
+				width: 11%
+			&__message
+				position: absolute
+				left: 31.4%
+				top: 65.8%
+				width: 2.5%
+				height: 1.6%
+				// border: 2px solid rgb(255 255 255 / 41%)
+				border-radius: 50%
+				display: flex
+				justify-content: center
+				align-items: center
+				background: rgb(0 0 0 / 31%)
+				cursor: pointer
+				&:hover
+					border: 2px solid rgb(255 255 255 / 41%)
+					.avatar-wrapper-top__target
+						transition: .4s all
+						width: 35%
+						height: 35%
+					.avatar-wrapper-top__float
+						z-index: 1
+						opacity: 1
+						transition: .3s
+			&__target
+				width: 61%
+				height: 63%
+				background-color: #fff
+				border-radius: 50%
+			&__float
+				transition: .6s
+				opacity: 0
+				z-index: -1
+				position: absolute
+				top: 50px
+				width: 212px
+				background-color: #fff
+				padding: 15px 12px 10px 12px
+				border-radius: 10px
+				color: #000
+				cursor: auto
+			&__float-link
+				position: relative
+				display: block
+				color: #828282
+				margin-bottom: 2px	
+				font-size: 12px
+				transition: .3s
+				&:hover
+					transition: .3s
+					color: blue
+				&::after
+					content: url('../img/icon/arroe_right.png')
+					position: absolute
+					right: 0
+					top: -2px
+			&__float-text
+				font-size: 14px
+			&__float-price
+				font-size: 24px
+		&-slider1
+			position: relative
+			margin: 38px 0
+			&__item
+				border: 1px solid #BDBDBD
+				padding: 20px
+				border-radius: 10px
+			&__info
+				margin-top: 10px
+				padding-left: 20px
+				text-align: left
+			&__title
+				color: #828282
+				margin-bottom: 5px
+				font-size: 14px
+				display: block
+			&__text
+				display: block
+				color: #000000
+				font-size: 18px
+				margin-bottom: 30px
+			&__price
+				font-size: 24px
+				color: #000000	
+				margin-bottom: 10px
+			&__btn
+				text-align: center
+				font-size: 16px
+				color: #fff
+				border-radius: 10px
+				padding: 18px 0
+				background-color: #F15A2C
+				transition: background-color .3s
+				&:hover
+					transition: background-color .3s
+					background-color: #dd4d21
+		&-pandora
+			position: relative
+			&__message
+				position: absolute
+				left: 23.7%
+				top: 64.5%
+				width: 2.3%
+				height: 1.8%
+				// border: 2px solid rgb(255 255 255 / 41%)
+				border-radius: 50%
+				display: flex
+				justify-content: center
+				align-items: center
+				background: rgb(0 0 0 / 31%)
+				cursor: pointer
+				&:hover
+					border: 2px solid rgb(255 255 255 / 41%)
+					.avatar-wrapper-pandora__target
+						transition: .4s all
+						width: 35%
+						height: 35%
+					.avatar-wrapper-pandora__float
+						z-index: 1
+						opacity: 1
+						transition: .3s
+			&__target
+				width: 61%
+				height: 63%
+				background-color: #fff
+				border-radius: 50%
+			&__float
+				transition: .6s
+				opacity: 0
+				z-index: -1
+				position: absolute
+				top: 50px
+				width: 212px
+				background-color: #fff
+				padding: 15px 12px 10px 12px
+				border-radius: 10px
+				color: #000
+				cursor: auto
+			&__float-link
+				position: relative
+				display: block
+				color: #828282
+				margin-bottom: 2px	
+				font-size: 12px
+				transition: .3s
+				&:hover
+					transition: .3s
+					color: blue
+				&::after
+					content: url('../img/icon/arroe_right.png')
+					position: absolute
+					right: 0
+					top: -2px
+			&__float-text
+				font-size: 14px
+			&__float-price
+				font-size: 24px
+			&__message2
+				position: absolute
+				right: 20%
+				top: 53.5%
+				width: 2.3%
+				height: 1.8%
+				border-radius: 50%
+				display: flex
+				justify-content: center
+				align-items: center
+				background: rgb(0 0 0 / 31%)
+				cursor: pointer
+				&:hover
+					border: 2px solid rgb(255 255 255 / 41%)
+					.avatar-wrapper-pandora__target2
+						transition: .4s all
+						width: 35%
+						height: 35%
+					.avatar-wrapper-pandora__float2
+						z-index: 1
+						opacity: 1
+						transition: .3s
+			&__jellyfish_1
+				position: absolute
+				top: 9.5%
+				left: 2%
+				width: 15%
+			&__jellyfish_2
+				position: absolute
+				top: 39.5%
+				left: 9%
+				width: 15%
+			&__jellyfish_3
+				position: absolute
+				top: 35%
+				right: 9%
+				width: 15%
+			&__jellyfish_4
+				position: absolute
+				top: 59%
+				right: 45%
+				width: 14%
+			&__jellyfish_5
+				position: absolute
+				top: 64%
+				right: 3.7%
+				width: 11%
+			&__target2
+				width: 61%
+				height: 63%
+				background-color: #fff
+				border-radius: 50%
+			&__float2
+				transition: .6s
+				opacity: 0
+				z-index: -1
+				position: absolute
+				top: 50px
+				width: 250px
+				background-color: #fff
+				padding: 15px 12px 10px 12px
+				border-radius: 10px
+				color: #000
+				cursor: auto
+			&__float-link2
+				position: relative
+				display: block
+				color: #828282
+				margin-bottom: 2px	
+				font-size: 12px
+				transition: .3s
+				&:hover
+					transition: .3s
+					color: blue
+				&::after
+					content: url('../img/icon/arroe_right.png')
+					position: absolute
+					right: 0
+					top: -2px
+			&__float-text2
+				font-size: 14px
+			&__float-price2
+				font-size: 24px
+		&-slider2
+			position: relative
+			margin: 38px 0
+			&__item
+				border: 1px solid #BDBDBD
+				padding: 20px
+				border-radius: 10px
+			&__info
+				margin-top: 10px
+				padding-left: 20px
+				text-align: left
+			&__title
+				color: #828282
+				margin-bottom: 5px
+				font-size: 14px
+				display: block
+			&__text
+				display: block
+				color: #000000
+				font-size: 18px
+				margin-bottom: 30px
+			&__price
+				font-size: 24px
+				color: #000000	
+				margin-bottom: 10px
+			&__btn
+				text-align: center
+				font-size: 16px
+				color: #fff
+				border-radius: 10px
+				padding: 18px 0
+				background-color: #F15A2C
+				transition: background-color .3s
+				&:hover
+					transition: background-color .3s
+					background-color: #dd4d21
+		&-footer
+			position: relative
+			&__bg
+			&__btn
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				top: 22.1%
+	&-video-slider
+		&__bg
+			background-image: url('../img/bgsliderdesk.png')
+			background-size: cover
+			// height: 900px
+			height: 100vh
+			background-size: 83.8%
+			background-position: center top
+			background-repeat: no-repeat
+			display: flex
+			align-items: center
+			justify-content: center
+			position: relative
+
+
+
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after
+	content: ''
+
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-prev:after
+	content: ''
+
+
+.swiper-container-video
+	// position: relative 
+	// & > .swiper-slide__content 
+	// 	position: absolute 
+	// 	top: 0 
+	.swiper-slide 
+		display: flex 
+		align-items: center 
+		justify-content: center 
+		flex-direction: column
+		transition: all 200ms linear 
+		transform: scale(0.9) 
+		&.swiper-slide-active
+			transform: scale(1.1) 
+
+//end avatar-header
+
+// .avatar-wrapper-slider1 .swiper-button-prev.swiper-button-prev-sl1swiper-button-disabled,
+// .avatar-wrapper-slider1 .swiper-button-next.swiper-button-next-sl0.swiper-button-disabled
+// 	display: none
+
+.avatar-wrapper-slider1 .swiper-button-prev 
+	background-image: url(https://simg2.marwin.kz/media/wysiwyg/subscribe/nav_prev.svg) !important
+	background-size: 12px
+	background-repeat: no-repeat
+	background-position: center center
+	width: 47px
+	height: 47px
+	background-color: #F3F3F3
+	border-radius: 50%
+.avatar-wrapper-slider1 .swiper-button-next 
+	background-image: url(https://simg2.marwin.kz/media/wysiwyg/subscribe/nav_next.svg) !important
+	background-size: 12px
+	background-repeat: no-repeat
+	background-position: center center
+	width: 47px
+	height: 47px
+	background-color: #F3F3F3
+	border-radius: 50%
+	
+
+.avatar-wrapper-slider2 .swiper-button-prev 
+	background-image: url(https://simg2.marwin.kz/media/wysiwyg/subscribe/nav_prev.svg) !important
+	background-size: 12px
+	background-repeat: no-repeat
+	background-position: center center
+	width: 47px
+	height: 47px
+	background-color: #F3F3F3
+	border-radius: 50%
+.avatar-wrapper-slider2 .swiper-button-next 
+	background-image: url(https://simg2.marwin.kz/media/wysiwyg/subscribe/nav_next.svg) !important
+	background-size: 12px
+	background-repeat: no-repeat
+	background-position: center center
+	width: 47px
+	height: 47px
+	background-color: #F3F3F3
+	border-radius: 50%
+	
+
+.slider1-fide .swiper-button-prev-fd2 
+	background-image: url(https://simg2.marwin.kz/media/wysiwyg/subscribe/nav_prev.svg) !important
+	background-size: 12px
+	background-repeat: no-repeat
+	background-position: center center
+	width: 47px
+	height: 47px
+	background-color: #F3F3F3
+	border-radius: 50%
+.slider1-fide .swiper-button-next-fd1
+	background-image: url(https://simg2.marwin.kz/media/wysiwyg/subscribe/nav_next.svg) !important
+	background-size: 12px
+	background-repeat: no-repeat
+	background-position: center center
+	width: 47px
+	height: 47px
+	background-color: #F3F3F3
+	border-radius: 50%
+
+
+.slider2-fide  .swiper-pagination-bullets.swiper-pagination-horizontal
+	// bottom: 0
+	// top: 75%
+.slider2-fide  .swiper-pagination-bullet
+	background: #fff
+	opacity: .5
+	width: 20px
+	height: 20px
+.slider2-fide  .swiper-pagination-bullet.swiper-pagination-bullet-active
+	background: #fff
+	opacity: 1
+
+.slider2-fide .swiper-button-prev-fd4
+	background-image: url(https://simg2.marwin.kz/media/wysiwyg/subscribe/nav_prev.svg) !important
+	background-size: 12px
+	background-repeat: no-repeat
+	background-position: center center
+	width: 47px
+	height: 47px
+	background-color: #F3F3F3
+	border-radius: 50%
+.slider2-fide .swiper-button-next-fd3
+	background-image: url(https://simg2.marwin.kz/media/wysiwyg/subscribe/nav_next.svg) !important
+	background-size: 12px
+	background-repeat: no-repeat
+	background-position: center center
+	width: 47px
+	height: 47px
+	background-color: #F3F3F3
+	border-radius: 50%
+
+
+.slider1-fide .swiper-pagination-bullets.swiper-pagination-horizontal
+	// bottom: 0
+	// top: 75%
+.slider1-fide .swiper-pagination-bullet
+	background: #fff
+	opacity: .5
+	width: 20px
+	height: 20px
+.slider1-fide .swiper-pagination-bullet.swiper-pagination-bullet-active
+	background: #fff
+	opacity: 1
+
+
+.wrap .swiper-pagination-bullets.swiper-pagination-horizontal
+	bottom: 0
+	top: 75%
+.wrap .swiper-pagination-bullet
+	background: #fff
+	opacity: .5
+	width: 20px
+	height: 20px
+.wrap .swiper-pagination-bullet.swiper-pagination-bullet-active
+	background: #fff
+	opacity: 1
+
+
+
+
+	
+.wrap .swiper-button-prev.swiper-button-prev-f0.swiper-button-disabled,
+.wrap .swiper-button-next.swiper-button-next-f1.swiper-button-disabled
+	display: none
+
+.wrap 
+	width: 100% 
+	// max-width: 645px 
+	max-width: 645px 
+	margin: auto
+	.wrap-inner 
+	.swiper-outter 
+		width: 100% 
+		// padding: 0 65px 
+		position: relative 
+	.swiper-button-prev,
+	.swiper-button-next 
+		width: 40px 
+		height: 40px 
+		// margin-top: -20px 
+		background-size: 100% auto 
+	.swiper-button-prev 
+		background-image: url(https://simg2.marwin.kz/media/wysiwyg/subscribe/nav_prev.svg) !important
+		background-size: 12px
+		background-repeat: no-repeat
+		background-position: center center
+		width: 47px
+		height: 47px
+		background-color: #fff
+		border-radius: 50%
+		left: 20%
+	.swiper-button-next 
+		background-image: url(https://simg2.marwin.kz/media/wysiwyg/subscribe/nav_next.svg) !important
+		background-size: 12px
+		background-repeat: no-repeat
+		background-position: center center
+		width: 47px
+		height: 47px
+		background-color: #fff
+		border-radius: 50%
+		right: 20%
+	.swiper-container 
+		width: 100% 
+		position: relative
+	.swiper-wrapper 
+		// width: 100% 
+	// .swiper-slide 
+	// 	width: 100% 
+	// 	background-color: #EFEFEF 
+	// 	width: 100% 
+	// 	height: 0 
+		// padding-bottom: 56.25% 
+		.video-container 
+			width: 100% 
+			// height: 0 
+			position: relative 
+			// padding-bottom: 100% 
+			iframe 
+				// position: absolute 
+				width: 100% 
+				height: 100% 
+				// bottom: 0
+				// left: 0 
+
+.swp-info
+	color: #fff
+	max-width: 535px
+	margin-top: 35px
+	font-size: 22px
+	text-align: center
+
+
+
+.slider1-fide
+	margin-top: -29.8%
+	position: relative
+	// background: #2f76c9
+	&-wrapper
+		&__item
+			display: flex
+			align-items: center
+			justify-content: space-around
+		&__item-left
+			// border: 1px solid red
+			max-width: 685px
+			width: 100%
+			// margin-left: 6.3%
+		&__item-right
+			max-width: 505px
+			width: 100%
+			// margin-left: 9.5%
+			backdrop-filter: blur(23px)
+			background: rgba(255, 255, 255, 0.2)
+		&__item-info
+			padding: 27px 60px 50px 30px
+			border: 1px solid #fff
+			border-radius: 15px
+			color: #fff
+		&__item-lego
+			font-size: 14px
+		&__item-title
+			font-size: 34px
+			margin-bottom: 40px
+		&__item-desc
+			font-size: 14px
+			margin-bottom: 65px
+		&__item-link
+			position: relative
+			font-size: 20px
+			color: #fff
+			padding-right: 20px
+			&::after
+				content: url('../img/slider-fide_1/arrow-white_avatar.png')
+				position: absolute
+				left: 100%
+				top: 1px
+
+
+.slider2-fide
+	margin-top: -29.8%
+	position: relative
+	// background: #2f76c9
+	&-wrapper
+		&__item
+			display: flex
+			align-items: center
+			justify-content: space-around
+		&__item-left
+			// border: 1px solid red
+			max-width: 685px
+			width: 100%
+			// margin-left: 6.3%
+		&__item-right
+			max-width: 505px
+			width: 100%
+			// margin-left: 9.5%
+			backdrop-filter: blur(23px)
+			background: rgba(255, 255, 255, 0.2)
+		&__item-info
+			padding: 27px 60px 50px 30px
+			border: 1px solid #fff
+			border-radius: 15px
+			color: #fff
+		&__item-lego
+			font-size: 14px
+		&__item-title
+			font-size: 34px
+			margin-bottom: 40px
+		&__item-desc
+			font-size: 14px
+			margin-bottom: 65px
+		&__item-link
+			position: relative
+			font-size: 20px
+			color: #fff
+			padding-right: 20px
+			&::after
+				content: url('../img/slider-fide_1/arrow-white_avatar.png')
+				position: absolute
+				left: 100%
+				top: 1px
+
